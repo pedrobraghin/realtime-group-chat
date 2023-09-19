@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #252525;
+  color: #f4f4f4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 5rem;
+  gap: 1rem;
+  position: relative;
+}
+
+main {
+  background-color: #353535;
+  padding: 2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+  align-self: center;
+  overflow-y: auto;
+  height: 50vh;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+#messages-container {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  outline: none;
+}
+
+input[id="name-input"] {
+  padding: 0.4rem 1rem;
+}
+
+input[id="message-input"] {
+  padding: 0.4rem 1rem;
+  width: 100%;
+}
+
+#image-input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  gap: 0.5rem;
+}
+
+button {
+  width: 8rem;
+  cursor: pointer;
+}
+
+#message-input-container {
+  display: flex;
+  align-items: stretch;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+#typing-label {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  font-style: italic;
+}
+
+.typing-label {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.image-message {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  border-radius: 0.2rem;
+  border: 2px solid #f4f4f4;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+#recording-label {
+  font-style: italic;
+  color: rgb(26, 218, 26);
+}
+
+.audio-message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.audio-player {
+  margin: 0.5rem 0;
+}
